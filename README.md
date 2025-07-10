@@ -45,3 +45,29 @@
   - **Monitors and optimizes performance:**
     - Analyzes and tunes queries, indexes, and system configurations.
     - Tracks database health and resolves performance bottlenecks.
+
+## ⚙️ Technology Stack
+
+- **Django**  
+  A high-level Python web framework used for building the RESTful API.
+
+- **Django REST Framework (DRF)**  
+  Provides powerful tools for creating and managing RESTful APIs.
+
+- **PostgreSQL**  
+  A robust relational database used for structured data storage.
+
+- **GraphQL**  
+  Enables flexible and efficient querying of data.
+
+- **Celery**  
+  Handles asynchronous tasks such as sending notifications or processing background jobs.
+
+- **Redis**  
+  In-memory data store used for caching and session management.
+
+- **Docker**  
+  Ensures consistent development and deployment using containerization.
+
+- **CI/CD Pipelines**  
+  Automates testing and deployment of code changes for faster and safer releases.
