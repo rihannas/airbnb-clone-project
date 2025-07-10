@@ -176,7 +176,7 @@ This is typically modeled with a **PropertyAmenities** join table.
 - Each **Booking** has one **Payment**.
 - A **Property** can have many **Amenities**, and an **Amenity** can belong to many **Properties** (many-to-many).
 
-## 🛠️ Features Overview
+## 🛠️ Features Breakdown
 
 1. **API Documentation**
 
