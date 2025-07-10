@@ -254,3 +254,15 @@ To ensure the safety and integrity of our application, several key security meas
   All incoming data is validated and sanitized to prevent injection attacks (e.g., SQL injection, cross-site scripting), preserving database integrity and application stability.
 
 ---
+
+## 🔄 CI/CD Pipeline
+
+Continuous Integration and Continuous Deployment (CI/CD) pipelines automate the process of testing, building, and deploying the application. This ensures that code changes are quickly and safely integrated into the main codebase and delivered to production without manual intervention.
+
+CI/CD pipelines are essential for maintaining code quality, reducing errors, and accelerating the development lifecycle. They help catch bugs early through automated testing and streamline deployments, making the release process more reliable and efficient.
+
+### Tools Used
+
+- **GitHub Actions:** Automates workflows such as running tests, building Docker images, and deploying code on every push or pull request.
+- **Docker:** Provides containerization to ensure consistent environments across development, testing, and production stages.
+- **Celery:** Manages asynchronous background tasks as part of deployment workflows when needed.
