@@ -175,3 +175,61 @@ This is typically modeled with a **PropertyAmenities** join table.
 - A **User** can leave multiple **Reviews**, each tied to a **Property**.
 - Each **Booking** has one **Payment**.
 - A **Property** can have many **Amenities**, and an **Amenity** can belong to many **Properties** (many-to-many).
+
+## 🛠️ Features Overview
+
+1. **API Documentation**
+
+   - **OpenAPI Standard:** The backend APIs are documented using the OpenAPI standard to ensure clarity and ease of integration.
+   - **Django REST Framework:** Provides a comprehensive RESTful API for handling CRUD operations on user, property, booking, and payment data.
+   - **GraphQL:** Offers a flexible and efficient query mechanism for interacting with the backend.
+
+2. **User Authentication**
+
+   - **Endpoints:** `/users/`, `/users/{user_id}/`
+   - **Features:** Register new users, authenticate, and manage user profiles with role-based access control (hosts, guests).
+
+3. **Property Management**
+
+   - **Endpoints:** `/properties/`, `/properties/{property_id}/`
+   - **Features:** Create, update, retrieve, and delete property listings, including managing property details, images, pricing, and amenities.
+
+4. **Booking System**
+
+   - **Endpoints:** `/bookings/`, `/bookings/{booking_id}/`
+   - **Features:** Make, update, and manage bookings, including check-in/check-out dates, availability checks, and booking status.
+
+5. **Payment Processing**
+
+   - **Endpoints:** `/payments/`
+   - **Features:** Handle secure payment transactions for bookings, track payment statuses, support refunds, and integrate with third-party payment gateways.
+
+6. **Review System**
+
+   - **Endpoints:** `/reviews/`, `/reviews/{review_id}/`
+   - **Features:** Post, update, and delete reviews for properties, with ratings and comments to maintain quality assurance.
+
+7. **Notification System**
+
+   - **Features:** Send email and in-app notifications for booking confirmations, cancellations, payment updates, and reminders to improve user engagement.
+
+8. **Database Optimizations**
+
+   - **Indexing:** Implement indexes on frequently queried fields for faster data retrieval.
+   - **Caching:** Use Redis for caching commonly accessed data and session management to reduce database load and improve response times.
+
+9. **Asynchronous Task Handling**
+
+   - **Celery Integration:** Offload long-running tasks such as sending emails, processing payments, and generating reports to Celery workers to keep the app responsive.
+
+10. **Containerization and Deployment**
+
+    - **Docker:** Containerize the application to ensure consistent environments across development, testing, and production.
+    - **CI/CD Pipelines:** Automate testing, building, and deployment processes for faster and more reliable releases.
+
+11. **Role-Based Access Control**
+
+    - Enforce permissions based on user roles (e.g., host vs. guest) to secure endpoints and restrict access to sensitive data.
+
+12. **Search and Filtering**
+    - Provide search functionality and filters on properties based on location, price, amenities, and availability to enhance user experience.
