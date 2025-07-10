@@ -233,3 +233,24 @@ This is typically modeled with a **PropertyAmenities** join table.
 
 12. **Search and Filtering**
     - Provide search functionality and filters on properties based on location, price, amenities, and availability to enhance user experience.
+
+## 🔐 API Security
+
+To ensure the safety and integrity of our application, several key security measures are implemented:
+
+- **Authentication**  
+  Users must verify their identity, typically via secure login mechanisms such as JWT tokens or OAuth. This prevents unauthorized access to user accounts and sensitive data.
+
+- **Authorization**  
+  After authentication, the system enforces role-based access control to ensure users can only access resources and perform actions they are permitted to. This protects data privacy and restricts operations like property management and payment processing to authorized users only.
+
+- **Rate Limiting**  
+  Limits the number of API requests a client can make within a certain time frame to prevent abuse, such as brute force attacks or denial-of-service (DoS) attacks, protecting system availability.
+
+- **Data Encryption**  
+  Sensitive data such as passwords and payment information is encrypted in transit (via HTTPS) and at rest, ensuring data confidentiality and compliance with security standards.
+
+- **Input Validation & Sanitization**  
+  All incoming data is validated and sanitized to prevent injection attacks (e.g., SQL injection, cross-site scripting), preserving database integrity and application stability.
+
+---
