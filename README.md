@@ -71,3 +71,107 @@
 
 - **CI/CD Pipelines**  
   Automates testing and deployment of code changes for faster and safer releases.
+
+## 🗂️ Database Design
+
+This project uses a relational database structure with clearly defined entities and relationships.
+
+### 🔑 Key Entities
+
+---
+
+#### **1. Users**
+
+Represents all users of the platform, including hosts and guests.
+
+- `id` (Primary Key) – Unique identifier for each user
+- `email` – User's email address (unique)
+- `password` – Hashed user password
+- `role` – Defines whether the user is a host or guest
+- `created_at` – Timestamp when the user was created
+
+---
+
+#### **2. Properties**
+
+Represents listings added by hosts.
+
+- `id` (Primary Key) – Unique identifier for each property
+- `title` – Title or name of the property
+- `description` – Detailed information about the property
+- `location` – Address or city of the property
+- `price_per_night` – Cost per night to stay at the property
+
+**Relationship:**  
+A user (host) can create multiple properties.
+
+---
+
+#### **3. Bookings**
+
+Represents reservations made by guests.
+
+- `id` (Primary Key) – Unique identifier for each booking
+- `user_id` (Foreign Key) – Refers to the guest making the booking
+- `property_id` (Foreign Key) – Refers to the booked property
+- `start_date` – Check-in date
+- `end_date` – Check-out date
+
+**Relationship:**  
+A booking belongs to one property and one guest.
+
+---
+
+#### **4. Reviews**
+
+Feedback left by guests after a stay.
+
+- `id` (Primary Key) – Unique identifier for each review
+- `user_id` (Foreign Key) – Reviewer (guest)
+- `property_id` (Foreign Key) – Reviewed property
+- `rating` – Numeric score (e.g., 1–5 stars)
+- `comment` – Text feedback from the guest
+
+**Relationship:**  
+A user can review multiple properties. A property can have many reviews.
+
+---
+
+#### **5. Payments**
+
+Tracks payment transactions for bookings.
+
+- `id` (Primary Key) – Unique identifier for each payment
+- `booking_id` (Foreign Key) – Refers to the booking being paid for
+- `amount` – Total amount paid
+- `status` – Payment status (e.g., pending, completed)
+- `paid_at` – Timestamp when payment was made
+
+**Relationship:**  
+Each booking has one corresponding payment.
+
+---
+
+#### **6. Amenities**
+
+Represents features or services available at a property.
+
+- `id` (Primary Key) – Unique identifier for each amenity
+- `name` – Name of the amenity (e.g., Wi-Fi, Air Conditioning, Parking)
+- `description` – Optional detail about the amenity
+- `icon` – (Optional) Icon or visual representation of the amenity
+
+**Relationship:**  
+Many-to-many: A property can have multiple amenities, and an amenity can be associated with multiple properties.  
+This is typically modeled with a **PropertyAmenities** join table.
+
+---
+
+### 🔗 Entity Relationships Summary
+
+- A **User** can list multiple **Properties**.
+- A **User** can make multiple **Bookings**.
+- A **Booking** is linked to one **Property** and one **User**.
+- A **User** can leave multiple **Reviews**, each tied to a **Property**.
+- Each **Booking** has one **Payment**.
+- A **Property** can have many **Amenities**, and an **Amenity** can belong to many **Properties** (many-to-many).
