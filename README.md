@@ -1,5 +1,13 @@
 # airbnb-clone-project
 
+## Project Description
+
+This project is a full-stack clone of the popular accommodation booking platform **AirBnB**. The goal is to build a functional web application that allows users to browse property listings, view detailed property information, and complete bookings.
+
+---
+
+# Backend
+
 ## Team Roles
 
 - **DevOps Engineer:**
@@ -266,3 +274,86 @@ CI/CD pipelines are essential for maintaining code quality, reducing errors, and
 - **GitHub Actions:** Automates workflows such as running tests, building Docker images, and deploying code on every push or pull request.
 - **Docker:** Provides containerization to ensure consistent environments across development, testing, and production stages.
 - **Celery:** Manages asynchronous background tasks as part of deployment workflows when needed.
+
+---
+
+# Frontend
+
+## Tech Stack
+
+- **Frontend:** HTML, CSS, JavaScript (React or similar framework)
+- **Version Control:** Git and GitHub
+- **Design Tools:** Figma for UI/UX design
+
+---
+
+## UI/UX Design Planning
+
+### Color Styles
+
+- **Primary:** `#FF5A5F`
+- **Secondary:** `#008489`
+- **Background:** `#FFFFFF`
+- **Text:** `#222222`
+- **Secondary Text:** `#717171`
+
+### Typography
+
+- **Primary Font:** Circular
+- **Headings:** Bold (700), 24px–32px
+- **Body Text:** Medium (500), 16px
+- **Secondary Text:** Book (400), 14px
+
+### Importance of Identifying Design Properties
+
+Identifying design properties (such as color styles, typography, and spacing) ensures **consistency and scalability** in UI design. It allows developers to:
+
+- Maintain **visual harmony** across all pages.
+- Speed up development by using **reusable design tokens**.
+- Improve **user experience** through a cohesive look and feel.
+- Make the app easier to maintain and scale as new features are added.
+
+---
+
+## UI Component Patterns
+
+### Planned Components
+
+- **Navbar**
+
+  - Logo
+  - Search bar
+  - User navigation (login, profile, settings)
+  - Responsive menu for mobile
+
+- **Property Card**
+
+  - Property image
+  - Basic details (price, location, rating)
+  - Favorite button
+  - Responsive grid layout
+
+- **Footer**
+  - Site links
+  - Company information
+  - Social media links
+  - Copyright
+
+Each component will be designed for **reusability** and **visual consistency** across the application.
+
+---
+
+## Project Roles and Responsibilities
+
+| **Role**                | **Responsibilities**                                                         |
+| ----------------------- | ---------------------------------------------------------------------------- |
+| **Project Manager**     | Oversees timeline, coordinates the team, manages deliverables.               |
+| **Frontend Developers** | Implement UI components, ensure responsive design, integrate with APIs.      |
+| **Backend Developers**  | Build APIs, manage database, implement business logic.                       |
+| **Designers**           | Create mockups, maintain design system, ensure user experience quality.      |
+| **QA/Testers**          | Write test cases, perform testing, report bugs, verify fixes.                |
+| **DevOps Engineers**    | Manage deployment, CI/CD pipeline, server infrastructure.                    |
+| **Product Owner**       | Define requirements, prioritize features, represent stakeholder needs.       |
+| **Scrum Master**        | Facilitate agile processes, remove blockers, organize stand-ups and sprints. |
+
+---
